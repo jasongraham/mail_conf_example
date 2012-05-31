@@ -1,0 +1,22 @@
+# mairix configuration file
+
+# the base where our mail is stored, and where we put the mairix database
+base=~/.mail
+
+# Maildirs. '...' Means use all subfolders
+maildir=school...
+maildir=gmail...
+
+# In my case uses around 35 MB
+database=~/.mairix/database
+
+# The output folder after a search
+mfolder=mairix-search
+
+# don't index spam folders
+omit=gmail/spam
+omit=school/junk
+
+# don't index trash folders
+omit=school/trash
+omit=gmail/trash

@@ -1,0 +1,5 @@
+mutt/cache
+mutt/muttmailboxes
+*.swp
+*.pyc
+

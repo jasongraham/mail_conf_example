@@ -1,0 +1,24 @@
+#~/.mutt/school
+# school configuration
+
+# save copies of sent emails to the ${folder}Sent directory
+# the '+' expands to $folders (like '~' to $HOME in the bash shell)
+set record = +school/sent
+set postponed = +school/drafts
+set signature = ~/.mail_config/mutt/sig_school.sig
+
+# use msmtp to send outgoing mail to the mailserver
+# see ~/.msmtp for configuration
+set sendmail="/usr/bin/msmtp -a school"
+
+set from="username@school.edu"
+
+# bcc myself to make gmail style threaded conversations
+my_hdr bcc: username@school.edu
+
+# pgp settings
+my_hdr X-PGP-Key: http://my.website.com/pubkey.asc
+set pgp_sign_as=MY_PGP_KEY_ID
+set pgp_autosign=yes
+
+# vim: set ft=muttrc

@@ -1,0 +1,25 @@
+# Main configuration based on http://www.physics.drexel.edu/liki/index.php/Mutt
+
+set folder = ~/.mail
+source ~/.mail_config/mutt/muttmailboxes
+set spoolfile = +"school/inbox"
+
+source ~/.mail_config/mutt/common
+source ~/.mail_config/mutt/colors
+# Not using alias to store addresses now,
+# using lbdb
+#set alias_file=~/.mail_config/mutt/aliases
+#source $alias_file
+set query_command="lbdbq '%s'"
+source ~/.mail_config/mutt/pgp
+
+# if we are in any directory starting with the following, pull
+# specific settings from somewhere else
+folder-hook +school/.* "source ~/.mail_config/mutt/school"
+folder-hook +gmail/.* "source ~/.mail_config/mutt/gmail"
+
+# Mutt will mark emails from these addresses as having been sent by you
+alternates username@school.edu username@gmail.com me@other_email.com
+
+# All the macros we have defined
+source ~/.mail_config/mutt/macros

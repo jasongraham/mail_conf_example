@@ -1,0 +1,15 @@
+# macros
+macro generic   ,<Space>    ":source ~/.mail_config/mutt/muttrc\n" "Reload mutt's configuration file"
+macro index \cn     <next-unread-mailbox>
+macro pager j       <next-line>
+macro pager k       <previous-line>
+macro pager <PageUp>    <previous-undeleted>
+macro pager <PageDown>  <next-undeleted>
+macro pager \cb         <pipe-entry>'w3m'<enter> 'Follow links in w3m'
+
+# macros for mairix
+macro index,pager ,f "<shell-escape>mairix -f ~/.mail_config/mairixrc " "run a Mairix search"
+macro index,pager ,s "<change-folder-readonly>=mairix-search\n" "switch to mairix results folder"
+macro index,pager ,i "<change-folder>=school/inbox\n" "back to inbox"
+
+# vim: set ft=muttrc
