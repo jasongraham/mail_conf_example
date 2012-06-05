@@ -55,7 +55,9 @@ maxconnections = 2
 remotehost = mail.school.edu
 remoteusereval = get_username("mail.school.edu")
 remotepasseval = get_password("mail.school.edu")
+# If using ssl, you will need to specify certificates to use with them
 ssl = yes
+sslcacertfile = /path/to/cacertfile.crt
 realdelete = yes
 
 # Translate remote names to local names:
@@ -81,7 +83,9 @@ maxconnections = 2
 remotehost = imap.gmail.com
 remoteusereval = get_username("imap.gmail.com")
 remotepasseval = get_password("imap.gmail.com")
+# If using ssl, you will need to specify certificates to use with them
 ssl = yes
+sslcacertfile = /path/to/cacertfile.crt
 realdelete = no
 # Note the nametrans above in local-gmail: it undoes this one
 nametrans = lambda foldername: re.sub ('^\[gmail\]\/', '',
