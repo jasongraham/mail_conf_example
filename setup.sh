@@ -57,6 +57,7 @@ rm -rf $HOME/.msmtprc $HOME/.mutt $HOME/.lbdbrc $HOME/bin/export_x_info.sh $HOME
 ln -s $HOME/.mail_config/msmtprc $HOME/.msmtprc
 ln -s $HOME/.mail_config/mutt $HOME/.mutt
 ln -s $HOME/.mail_config/lbdb.rc $HOME/.lbdbrc
+ln -s $HOME/.mail_config/offlineimaprc $HOME/.offlineimaprc
 
 # msmtprc needs to be 600 permissions
 chmod 600 $HOME/.mail_config/msmtprc
