@@ -53,7 +53,7 @@ rm -rf $HOME/.mail_config
 ln -s $DIR $HOME/.mail_config
 
 # Symlinks
-rm -rf $HOME/.msmtprc $HOME/.mutt $HOME/.lbdbrc $HOME/bin/export_x_info.sh $HOME/bin/pullmail.sh
+rm -rf $HOME/.msmtprc $HOME/.mutt $HOME/.lbdbrc $HOME/.offlineimaprc
 ln -s $HOME/.mail_config/msmtprc $HOME/.msmtprc
 ln -s $HOME/.mail_config/mutt $HOME/.mutt
 ln -s $HOME/.mail_config/lbdb.rc $HOME/.lbdbrc
@@ -63,6 +63,7 @@ ln -s $HOME/.mail_config/offlineimaprc $HOME/.offlineimaprc
 chmod 600 $HOME/.mail_config/msmtprc
 
 # binary files
+rm -rf $HOME/bin/export_x_info.sh $HOME/bin/pullmail.sh
 ln -s $HOME/.mail_config/lib/export_x_info.sh $HOME/bin/export_x_info.sh
 ln -s $HOME/.mail_config/lib/pullmail.sh $HOME/bin/pullmail.sh
 
